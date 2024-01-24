@@ -569,8 +569,8 @@ Url make_obs_url( const std::string & obsuri )
         }
         else if ( platform == "Leap" && pdata.vendor() == "openSUSE" )
         {
-          // bsc#1187425 Hotfix
-          platform = "openSUSE_Leap_$releasever";
+          // openSUSE Leap 15.3+ uses simply "15.X" as a reference to the codestream
+          platform = "$releasever";
         }
         else
           platform += "_$releasever";
